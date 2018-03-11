@@ -6,7 +6,6 @@ html, body {
 
 }
 
-
 .img-responsive {
   width: 100%;
 }
@@ -20,6 +19,15 @@ html, body {
   overflow: hidden;
   position: relative;
   min-width: 100%
+}
+
+#name {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#position {
+  margin-top: 5px;
 }
 
  .mainPic {
@@ -36,12 +44,13 @@ html, body {
 #headshot {
   position: absolute;
   bottom: 0;
-  width: 50%;
-  height: 80%;
+  width: 80%;
+  height: 100%;
   text-align: left;
-  right: 0;
   padding-right: 10px;
   color: white;
+  margin-left: 150px;
+  padding-top: 15px;
 }
 
 #headpic {
@@ -51,7 +60,8 @@ html, body {
   float: right;
   bottom: 0;
   right: 0;
-  bottom: 500px;
+ 
+
 }
 
 #tech {

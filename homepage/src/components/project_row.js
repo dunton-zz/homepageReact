@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// images are 1440x400
 
 class ProjectRow extends Component {
 	render() {

@@ -9,8 +9,9 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <HeaderRow mainImage="media/ny.jpg" headshot="media/headshot.png" />
-        <ProjectRow name="Weather Forecaster (React)" link="weather" image="media/weather.jpg"/>
-        <ProjectRow name="Ryantube! (YT-ish Clone Using React)" link="ryantube" image="media/ryantube.jpg"/>
+        <ProjectRow name="Movie Finder (React/Flux)" link="movie-finder" image="media/movie-finder.jpg"/>
+        <ProjectRow name="Weather Forecaster (React/Redux)" link="weather" image="media/weather.jpg"/>
+        <ProjectRow name="Ryantube (React)" link="ryantube" image="media/ryantube.jpg"/>
         <ProjectRow name="Todo List App (React)" link="todo" image="media/todo.png"/>
         <ProjectRow name="Neighborhood Map" link="neighborhood" image="media/maps.jpg"/>
         <ProjectRow name="AJAX Location API Information" link="ajax" image="media/nyt.jpg"/>
