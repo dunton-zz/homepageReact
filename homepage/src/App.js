@@ -1,24 +1,56 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import HeaderRow from './components/header_row'
-import ProjectRow from './components/project_row'
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/Header";
+import Project from "./components/Project";
 
 class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <HeaderRow mainImage="media/ny.jpg" headshot="media/headshot.png" />
-        <ProjectRow name="Movie Finder (React/Flux)" link="movie-finder" image="media/movie-finder.jpg"/>
-        <ProjectRow name="Weather Forecaster (React/Redux)" link="weather" image="media/weather.jpg"/>
-        <ProjectRow name="Ryantube (React)" link="ryantube" image="media/ryantube.jpg"/>
-        <ProjectRow name="Todo List App (React)" link="todo" image="media/todo.png"/>
-        <ProjectRow name="Neighborhood Map" link="neighborhood" image="media/maps.jpg"/>
-        <ProjectRow name="AJAX Location API Information" link="ajax" image="media/nyt.jpg"/>
-        <ProjectRow name="Frogger Game" link="frogger" image="media/rainforest.jpg"/>
-        <ProjectRow name="Design Mockup Project" link="design" image="media/design.jpg"/>
-        <ProjectRow name="My Resume" link="resume" image="media/resume.jpg"/>
-        <ProjectRow name="Contact Me!" link="contact" image="media/contact.jpg"/>
+        <Header mainImage="media/ny.jpg" headshot="media/headshot.png" />
+        <Project
+          name="Movie Finder (React/Flux)"
+          link="movie-finder"
+          image="media/movie-finder.jpg"
+        />
+        <Project
+          name="Weather Forecaster (React/Redux)"
+          link="weather"
+          image="media/weather.jpg"
+        />
+        <Project
+          name="Ryantube (React)"
+          link="ryantube"
+          image="media/ryantube.jpg"
+        />
+        <Project
+          name="Todo List App (React)"
+          link="todo"
+          image="media/todo.png"
+        />
+        <Project
+          name="Neighborhood Map"
+          link="neighborhood"
+          image="media/maps.jpg"
+        />
+        <Project
+          name="AJAX Location API Information"
+          link="ajax"
+          image="media/nyt.jpg"
+        />
+        <Project
+          name="Frogger Game"
+          link="frogger"
+          image="media/rainforest.jpg"
+        />
+        <Project
+          name="Design Mockup Project"
+          link="design"
+          image="media/design.jpg"
+        />
+        <Project name="My Resume" link="resume" image="media/resume.jpg" />
+        <Project name="Contact Me!" link="contact" image="media/contact.jpg" />
       </div>
     );
   }
