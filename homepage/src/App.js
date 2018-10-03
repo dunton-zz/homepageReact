@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import Header from "./components/Header";
 import Project from "./components/Project";
 
@@ -9,6 +7,11 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <Header mainImage="media/ny.jpg" headshot="media/headshot.png" />
+        <Project
+          name="Difference of Squares"
+          link="diff-of-squares"
+          image="media/diff-squares.jpeg"
+        />
         <Project
           name="Movie Finder (React/Flux)"
           link="movie-finder"

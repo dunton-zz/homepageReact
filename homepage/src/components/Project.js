@@ -11,7 +11,7 @@ class Project extends Component {
           <MainPic>
             <a href={this.props.link + ".html"}>
               <Image responsive src={this.props.image} />
-              <h2>{this.props.name}</h2>
+              <Title>{this.props.name}</Title>
             </a>
           </MainPic>
         </Col>
@@ -28,6 +28,20 @@ const MainPic = styled.div`
 
   :hover {
     opacity: 1;
+  }
+`;
+
+const Title = styled.h2`
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+
+  @media (max-width: 700px) {
+    font-size: 20px;
+    top: 20%;
   }
 `;
 
