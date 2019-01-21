@@ -5,32 +5,51 @@ import { Row, Col, Media, Image } from "react-bootstrap";
 
 class Project extends Component {
   renderContent = () => {
-    if (this.props.link === "oscar watch") {
-      return (
-        <Row>
-          <Col md={12}>
-            <MainPic>
-              <a href="http://www.theoscarwatch.com/">
-                <Image responsive src={this.props.image} />
-                <Title>{this.props.name}</Title>
-              </a>
-            </MainPic>
-          </Col>
-        </Row>
-      );
-    } else {
-      return (
-        <Row>
-          <Col md={12}>
-            <MainPic>
-              <a href={this.props.link + ".html"}>
-                <Image responsive src={this.props.image} />
-                <Title>{this.props.name}</Title>
-              </a>
-            </MainPic>
-          </Col>
-        </Row>
-      );
+    switch (this.props.link) {
+      case "oscar watch": {
+        return (
+          <Row>
+            <Col md={12}>
+              <MainPic>
+                <a href="http://www.theoscarwatch.com/">
+                  <Image responsive src={this.props.image} />
+                  <Title>{this.props.name}</Title>
+                </a>
+              </MainPic>
+            </Col>
+          </Row>
+        );
+        break;
+      }
+      case "cole haan": {
+        return (
+          <Row>
+            <Col md={12}>
+              <MainPic>
+                <a href="https://partners.wsj.com/chasing-ambition">
+                  <Image responsive src={this.props.image} />
+                  <Title>{this.props.name}</Title>
+                </a>
+              </MainPic>
+            </Col>
+          </Row>
+        );
+        break;
+      }
+      default: {
+        return (
+          <Row>
+            <Col md={12}>
+              <MainPic>
+                <a href={this.props.link + ".html"}>
+                  <Image responsive src={this.props.image} />
+                  <Title>{this.props.name}</Title>
+                </a>
+              </MainPic>
+            </Col>
+          </Row>
+        );
+      }
     }
   };
   render() {

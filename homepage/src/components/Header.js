@@ -22,7 +22,7 @@ class Header extends Component {
               scratch. Enjoy!
             </Info>
           </HeadShot>
-          <Media>
+          <Media style={{ marginTop: 0 }}>
             <Image
               responsive
               src={this.props.mainImage}
