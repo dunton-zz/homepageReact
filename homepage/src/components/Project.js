@@ -4,19 +4,37 @@ import { Row, Col, Media, Image } from "react-bootstrap";
 // images are 1440x400
 
 class Project extends Component {
+  renderContent = () => {
+    if (this.props.link === "oscar watch") {
+      return (
+        <Row>
+          <Col md={12}>
+            <MainPic>
+              <a href="http://www.theoscarwatch.com/">
+                <Image responsive src={this.props.image} />
+                <Title>{this.props.name}</Title>
+              </a>
+            </MainPic>
+          </Col>
+        </Row>
+      );
+    } else {
+      return (
+        <Row>
+          <Col md={12}>
+            <MainPic>
+              <a href={this.props.link + ".html"}>
+                <Image responsive src={this.props.image} />
+                <Title>{this.props.name}</Title>
+              </a>
+            </MainPic>
+          </Col>
+        </Row>
+      );
+    }
+  };
   render() {
-    return (
-      <Row>
-        <Col md={12}>
-          <MainPic>
-            <a href={this.props.link + ".html"}>
-              <Image responsive src={this.props.image} />
-              <Title>{this.props.name}</Title>
-            </a>
-          </MainPic>
-        </Col>
-      </Row>
-    );
+    return this.renderContent();
   }
 }
 

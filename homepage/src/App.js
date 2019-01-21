@@ -8,9 +8,9 @@ class App extends Component {
       <div className="container-fluid">
         <Header mainImage="media/ny.jpg" headshot="media/headshot.png" />
         <Project
-          name="Difference of Squares"
-          link="diff-of-squares"
-          image="media/diff-squares.jpeg"
+          name="Oscar Watch Tracker"
+          link="oscar watch"
+          image="media/oscar-watch.jpg"
         />
         <Project
           name="Movie Finder (React/Flux)"
