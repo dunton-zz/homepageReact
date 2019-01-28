@@ -1,14 +1,22 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import Header from "./components/Header";
 import Project from "./components/Project";
 
 class App extends Component {
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid" style={{ padding: 0 }}>
         <Header mainImage="media/ny.jpg" headshot="media/headshot.png" />
+        <Project
+          name="Oscar Watch Tracker"
+          link="oscar watch"
+          image="media/oscar-watch.jpg"
+        />
+        <Project
+          name="Cole Haan Chasing Ambition"
+          link="cole haan"
+          image="media/cole-haan.png"
+        />
         <Project
           name="Movie Finder (React/Flux)"
           link="movie-finder"
