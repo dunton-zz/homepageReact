@@ -26,7 +26,28 @@ class Project extends Component {
           <Row>
             <Col md={12}>
               <MainPic>
-                <a href="https://partners.wsj.com/chasing-ambition">
+                <a
+                  href="https://partners.wsj.com/chasing-ambition"
+                  target="_blank"
+                >
+                  <Image responsive src={this.props.image} />
+                  <Title>{this.props.name}</Title>
+                </a>
+              </MainPic>
+            </Col>
+          </Row>
+        );
+        break;
+      }
+      case "service-now": {
+        return (
+          <Row>
+            <Col md={12}>
+              <MainPic>
+                <a
+                  href="https://partners.wsj.com/servicenow/work-reimagined"
+                  target="_blank"
+                >
                   <Image responsive src={this.props.image} />
                   <Title>{this.props.name}</Title>
                 </a>
@@ -41,7 +62,7 @@ class Project extends Component {
           <Row>
             <Col md={12}>
               <MainPic>
-                <a href={this.props.link + ".html"}>
+                <a href={this.props.link + ".html"} target="_blank">
                   <Image responsive src={this.props.image} />
                   <Title>{this.props.name}</Title>
                 </a>

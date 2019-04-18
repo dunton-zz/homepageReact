@@ -8,6 +8,11 @@ class App extends Component {
       <div className="container-fluid" style={{ padding: 0 }}>
         <Header mainImage="media/ny.jpg" headshot="media/headshot.png" />
         <Project
+          name="Service Now"
+          link="service-now"
+          image="media/service_now.jpg"
+        />
+        <Project
           name="Oscar Watch Tracker"
           link="oscar watch"
           image="media/oscar-watch.jpg"
