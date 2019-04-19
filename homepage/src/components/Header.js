@@ -27,6 +27,7 @@ class Header extends Component {
               responsive
               src={this.props.mainImage}
               alt="main background image"
+              style={{ width: "100%" }}
             />
           </Media>
         </Col>

@@ -57,6 +57,23 @@ class Project extends Component {
         );
         break;
       }
+      case "resume": {
+        return (
+          <Row>
+            <Col md={12}>
+              <MainPic>
+                <a
+                  href="https://s3.amazonaws.com/dunton-portfolio/docs/Dunton_Resume.pdf"
+                  download="Dunton_Resume"
+                >
+                  <Image responsive src={this.props.image} />
+                  <Title>{this.props.name}</Title>
+                </a>
+              </MainPic>
+            </Col>
+          </Row>
+        );
+      }
       default: {
         return (
           <Row>
@@ -83,6 +100,10 @@ const MainPic = styled.div`
   width: 100%;
   height: 33%;
   position: relative;
+
+  img {
+    width: 100%;
+  }
 
   :hover {
     opacity: 1;
