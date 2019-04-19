@@ -1,17 +1,42 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col, Media, Image } from "react-bootstrap";
+import { Row, Col, Image } from "react-bootstrap";
+import ReactGA from "react-ga";
+
 // images are 1440x400
 
 class Project extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      projectName: null
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      projectName: this.props.name
+    });
+  }
+  trackClick = e => {
+    ReactGA.event({
+      category: "Project",
+      action: "Click",
+      label: `${this.state.projectName}`
+    });
+  };
   renderContent = () => {
     switch (this.props.link) {
       case "oscar watch": {
         return (
           <Row>
             <Col md={12}>
-              <MainPic>
-                <a href="http://www.theoscarwatch.com/">
+              <MainPic onClick={this.trackClick}>
+                <a
+                  href="http://www.theoscarwatch.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Image responsive src={this.props.image} />
                   <Title>{this.props.name}</Title>
                 </a>
@@ -25,10 +50,11 @@ class Project extends Component {
         return (
           <Row>
             <Col md={12}>
-              <MainPic>
+              <MainPic onClick={this.trackClick}>
                 <a
                   href="https://partners.wsj.com/chasing-ambition"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Image responsive src={this.props.image} />
                   <Title>{this.props.name}</Title>
@@ -43,10 +69,11 @@ class Project extends Component {
         return (
           <Row>
             <Col md={12}>
-              <MainPic>
+              <MainPic onClick={this.trackClick}>
                 <a
                   href="https://partners.wsj.com/servicenow/work-reimagined"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Image responsive src={this.props.image} />
                   <Title>{this.props.name}</Title>
@@ -61,7 +88,7 @@ class Project extends Component {
         return (
           <Row>
             <Col md={12}>
-              <MainPic>
+              <MainPic onClick={this.trackClick}>
                 <a
                   href="https://s3.amazonaws.com/dunton-portfolio/docs/Dunton_Resume.pdf"
                   download="Dunton_Resume"
@@ -78,7 +105,7 @@ class Project extends Component {
         return (
           <Row>
             <Col md={12}>
-              <MainPic>
+              <MainPic onClick={this.trackClick}>
                 <a href={this.props.link + ".html"} target="_blank">
                   <Image responsive src={this.props.image} />
                   <Title>{this.props.name}</Title>
@@ -117,6 +144,7 @@ const Title = styled.h2`
   width: 100%;
   color: white;
   text-align: center;
+  font-size: font-size: 2.5vw;
 
   @media (max-width: 700px) {
     font-size: 20px;

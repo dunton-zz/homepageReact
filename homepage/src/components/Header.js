@@ -61,11 +61,14 @@ const HeadPic = styled.div`
 const Name = styled.h1`
   margin-bottom: 5px;
   margin-top: 10px;
+  font-size: 4vw;
 `;
 const Position = styled.h3`
   margin-top: 5px;
+  font-size: 3vw;
 `;
 const Info = styled.p`
+  font-size: 1.5vw;
   @media (max-width: 700px) {
     display: none;
   }

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
 import Project from "./components/Project";
+import ReactGA from "react-ga";
+ReactGA.initialize("UA-138662303-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   render() {
@@ -8,7 +11,7 @@ class App extends Component {
       <div className="container-fluid" style={{ padding: 0 }}>
         <Header
           mainImage="https://s3.amazonaws.com/dunton-portfolio/media/ny.jpg"
-          headshot="media/headshot.png"
+          headshot="https://s3.amazonaws.com/dunton-portfolio/media/headshot.png"
         />
         <Project
           name="Service Now"
