@@ -6,7 +6,10 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid" style={{ padding: 0 }}>
-        <Header mainImage="media/ny.jpg" headshot="media/headshot.png" />
+        <Header
+          mainImage="https://s3.amazonaws.com/dunton-portfolio/media/ny.jpg"
+          headshot="media/headshot.png"
+        />
         <Project
           name="Service Now"
           link="service-now"
